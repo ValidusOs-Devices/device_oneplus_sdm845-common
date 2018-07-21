@@ -73,6 +73,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.manager@1.0-java \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/fpc1020.idc:system/usr/idc/fpc1020.idc \
