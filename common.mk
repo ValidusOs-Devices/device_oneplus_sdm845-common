@@ -138,3 +138,6 @@ PRODUCT_PACKAGES_DEBUG += \
 # VNDK
 PRODUCT_PACKAGES += \
     vndk_package
+
+# Inherit from oppo-common
+$(call inherit-product, device/oppo/common/common.mk)    
