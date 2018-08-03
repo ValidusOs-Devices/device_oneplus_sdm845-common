@@ -37,6 +37,9 @@ on boot
     chown system system /proc/touchpanel/up_arrow_enable
     chown system system /proc/touchpanel/up_swipe_enable
 
+on property:ro.validus.device=*
+    setprop qemu.hw.mainkeys 0    
+
 service dashd /sbin/dashd
     class core
     critical
