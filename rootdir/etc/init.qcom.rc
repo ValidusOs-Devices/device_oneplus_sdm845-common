@@ -37,8 +37,11 @@ on boot
     chown system system /proc/touchpanel/up_arrow_enable
     chown system system /proc/touchpanel/up_swipe_enable
 
+on charger
+    write /sys/class/backlight/panel0-backlight/brightness 150    
+
 on property:ro.validus.device=*
-    setprop qemu.hw.mainkeys 0    
+    setprop qemu.hw.mainkeys 0     
 
 service dashd /sbin/dashd
     class core
