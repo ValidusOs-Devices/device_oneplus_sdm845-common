@@ -46,7 +46,6 @@ on boot
     chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/display_mode
     chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/hbm
 
-
     setprop vendor.camera.aux.packagelist "com.oneplus.camera"
 
     mkdir /persist/battery 0770 system system
@@ -58,6 +57,9 @@ on post-fs
     chown system system /sys/class/leds/vibrator/vmax_mv_user
     chown system system /sys/class/leds/vibrator/vmax_mv_call
     chown system system /sys/class/leds/vibrator/vmax_mv_strong
+
+    # OTG
+    write /sys/class/power_supply/usb/otg_switch 1
 
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150
