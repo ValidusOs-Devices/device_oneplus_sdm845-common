@@ -123,11 +123,11 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
     device/qcom/sepolicy/generic/private \
     $(COMMON_PATH)/sepolicy/qcom-qva-private
 
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
+#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
     device/qcom/sepolicy/generic/public \
     device/qcom/sepolicy/qva/public
 
